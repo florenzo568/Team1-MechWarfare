@@ -7,6 +7,9 @@ public class Movement : MonoBehaviour
     public float Speed;
     private float horizontal;
     public float JumpForce;
+    public bool FacingRight;
+    private bool canJump = true;
+    public SpriteRenderer Renderer;
     [SerializeField] private Rigidbody2D rb;
 
     void Start()
@@ -18,10 +21,15 @@ public class Movement : MonoBehaviour
     void Update()
     {
         horizontal = Input.GetAxisRaw("Horizontal");
-        if(Input.GetButtonDown("Jump"))
+        if(Input.GetButtonDown("Jump") && canJump == true)
         {
             rb.velocity = new Vector2(rb.velocity.x, JumpForce);
         }
+        if(Input.GetButtonDown("Jump") && rb.velocity.y > 0f)
+        {
+            rb.AddForce(transform.up * JumpForce);
+        }
+        //Flip();
         
     }
 
@@ -29,4 +37,17 @@ public class Movement : MonoBehaviour
     {
         rb.velocity = new Vector2(horizontal * Speed, rb.velocity.y);
     }
+
+    /*private void Flip()
+        {
+            if (horizontal <0f)
+            {
+                Renderer.flipX = true;
+            }
+            else if (horizontal > 0f)
+            {
+                Renderer.flipX = false;
+            }
+        }*/
+    
 }

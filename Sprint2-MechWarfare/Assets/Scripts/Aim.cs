@@ -7,6 +7,7 @@ public class Aim : MonoBehaviour
     private Camera mainCam;
     private Vector3 mousePos;
     public GameObject bullet;
+    [SerializeField] Movement Player;
     public Transform bulletTransform;
     public bool canFire = true;
     private float Timer;
@@ -26,6 +27,14 @@ public class Aim : MonoBehaviour
         float rotationZ = Mathf.Atan2(rotation.y,rotation.x) * Mathf.Rad2Deg;
 
         transform.rotation = Quaternion.Euler(0,0, rotationZ);
+        if(mousePos.x < 0)
+        {
+            Player.Renderer.flipX = true;
+        }
+        else if (mousePos.x > 0)
+        {
+            Player.Renderer.flipX = false;
+        }
 
         if(!canFire)
         {
