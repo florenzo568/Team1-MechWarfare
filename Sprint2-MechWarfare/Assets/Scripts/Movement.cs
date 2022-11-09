@@ -8,7 +8,7 @@ public class Movement : MonoBehaviour
     private float horizontal;
     public float JumpForce;
     public bool FacingRight;
-    private bool canJump = true;
+    public bool canJump = true;
     public SpriteRenderer Renderer;
     [SerializeField] private Rigidbody2D rb;
 
@@ -38,6 +38,23 @@ public class Movement : MonoBehaviour
         rb.velocity = new Vector2(horizontal * Speed, rb.velocity.y);
     }
 
+
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if(other.gameObject.CompareTag("Ground"))
+        {
+            canJump = true;
+        }
+        
+    }
+    void OnCollisionExit2D(Collision2D other)
+    {
+        if(other.gameObject.CompareTag("Ground"))
+        {
+            canJump = false;
+        }
+        
+    }
     /*private void Flip()
         {
             if (horizontal <0f)
