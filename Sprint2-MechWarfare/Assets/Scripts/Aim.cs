@@ -45,11 +45,14 @@ public class Aim : MonoBehaviour
                 Timer = 0;
             }
         }
-
+    if(Player.Gun == true)
+    {
         if(Input.GetMouseButton(0) && canFire)
         {
             canFire = false;
             Instantiate(bullet, bulletTransform.position, Quaternion.identity);
         }
+    }
+        
     }
 }
