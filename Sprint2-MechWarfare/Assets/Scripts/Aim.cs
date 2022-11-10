@@ -12,6 +12,7 @@ public class Aim : MonoBehaviour
     public bool canFire = true;
     private float Timer;
     public float FireRate;
+    public int Ammo;
     void Start()
     {
         mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
@@ -51,6 +52,7 @@ public class Aim : MonoBehaviour
         {
             canFire = false;
             Instantiate(bullet, bulletTransform.position, Quaternion.identity);
+                Ammo -= 1;
         }
     }
         
