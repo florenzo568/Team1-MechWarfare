@@ -5,7 +5,7 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     public float Speed;
-    public float Health = 10;
+    public float Health = 100;
     private float horizontal;
     public float JumpForce;
     public bool FacingRight;
@@ -15,8 +15,10 @@ public class Movement : MonoBehaviour
     public float jumpTime = 0.3f;
     public float StartjumpTime;
     public bool flame = true;
+    public bool flameObtained = false;
     public bool Gun = true;
     public bool Rockets = true;
+    public bool RocketsObtained = false;
 
     void Start()
     {
@@ -74,19 +76,26 @@ public class Movement : MonoBehaviour
             flame = false;
             Rockets = false;
         }
-        if (Input.GetButtonDown("2"))
+        if(flameObtained == true)
         {
-            flame = true;
-            Gun = false;
-            Rockets = false;
+            if (Input.GetButtonDown("2"))
+            {
+                flame = true;
+                Gun = false;
+                Rockets = false;
+            }
         }
-        if (Input.GetButtonDown("3"))
+        if (RocketsObtained == true)
         {
-            Rockets = true;
-            flame = false;
-            Gun = false;
+            if (Input.GetButtonDown("3"))
+            {
+                Rockets = true;
+                flame = false;
+                Gun = false;
+
+            }
+        }
             
-        }
     }
     
 }
