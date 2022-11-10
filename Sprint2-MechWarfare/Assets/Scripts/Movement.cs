@@ -10,11 +10,13 @@ public class Movement : MonoBehaviour
     public bool FacingRight;
     public bool canJump = true;
     public SpriteRenderer Renderer;
-    [SerializeField] private Rigidbody2D rb;
+    public Rigidbody2D rb;
+    public float jumpTime = 0.3f;
+    public float StartjumpTime;
 
     void Start()
     {
-        
+        StartjumpTime = jumpTime;
     }
 
     // Update is called once per frame
@@ -25,10 +27,15 @@ public class Movement : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, JumpForce);
         }
-        if(Input.GetButtonDown("Jump") && rb.velocity.y > 0f)
+        if(canJump == false)
         {
-            rb.AddForce(transform.up * JumpForce);
+            jumpTime -= Time.deltaTime;
         }
+        else
+        {
+            jumpTime = StartjumpTime;
+        }
+
         //Flip();
         
     }
@@ -55,16 +62,5 @@ public class Movement : MonoBehaviour
         }
         
     }
-    /*private void Flip()
-        {
-            if (horizontal <0f)
-            {
-                Renderer.flipX = true;
-            }
-            else if (horizontal > 0f)
-            {
-                Renderer.flipX = false;
-            }
-        }*/
     
 }
