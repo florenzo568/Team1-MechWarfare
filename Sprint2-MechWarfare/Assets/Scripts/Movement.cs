@@ -13,6 +13,7 @@ public class Movement : MonoBehaviour
     public Rigidbody2D rb;
     public float jumpTime = 0.3f;
     public float StartjumpTime;
+    public bool flame = true;
 
     void Start()
     {
