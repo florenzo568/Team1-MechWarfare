@@ -14,6 +14,7 @@ public class Movement : MonoBehaviour
     public float jumpTime = 0.3f;
     public float StartjumpTime;
     public bool flame = true;
+    public bool Gun = true;
 
     void Start()
     {
@@ -36,7 +37,7 @@ public class Movement : MonoBehaviour
         {
             jumpTime = StartjumpTime;
         }
-
+        WeaponSwapping();
         //Flip();
         
     }
@@ -62,6 +63,19 @@ public class Movement : MonoBehaviour
             canJump = false;
         }
         
+    }
+    void WeaponSwapping()
+    {
+        if (Input.GetButtonDown("1"))
+        {
+            Gun = true;
+            flame = false;
+        }
+        if (Input.GetButtonDown("2"))
+        {
+            flame = true;
+            Gun = false;
+        }
     }
     
 }
