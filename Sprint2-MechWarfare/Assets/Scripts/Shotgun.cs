@@ -14,6 +14,8 @@ private Camera mainCam;
     public float FireRate;
     public int Ammo;
     public int pellets;
+    private float angle;
+    private float spread;
     void Start()
     {
         mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
@@ -27,6 +29,8 @@ private Camera mainCam;
         Vector3 rotation = mousePos - transform.position;
 
         float rotationZ = Mathf.Atan2(rotation.y,rotation.x) * Mathf.Rad2Deg;
+
+        angle = Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg - 90;
 
         transform.rotation = Quaternion.Euler(0,0, rotationZ);
         if(mousePos.x < 0)
@@ -55,7 +59,10 @@ private Camera mainCam;
 
             for (int i = 0; i < pellets; i++)
             {
-                Instantiate(bullet, bulletTransform.position, Quaternion.identity);
+                spread = Random.Range(-10,10);
+                Quaternion bulletRotation = Quaternion.Euler(new Vector3(0,0,angle + spread));
+                GameObject bulletInstance = Instantiate(bullet, bulletTransform.position, bulletRotation);
+
             }
             
                 
