@@ -670,8 +670,12 @@ MonoBehaviour:
   jumpTime: 0.3
   StartjumpTime: 0
   flame: 0
+  flameObtained: 0
   Gun: 1
   Rockets: 0
+  RocketsObtained: 0
+  ShotGun: 0
+  ShotGunObtained: 0
 --- !u!114 &661379860
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -700,6 +704,7 @@ GameObject:
   - component: {fileID: 664680351}
   - component: {fileID: 664680352}
   - component: {fileID: 664680353}
+  - component: {fileID: 664680354}
   m_Layer: 0
   m_Name: Pivot
   m_TagString: Untagged
@@ -760,6 +765,25 @@ MonoBehaviour:
   canFire: 1
   FireRate: 0.5
   Ammo: 20
+--- !u!114 &664680354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 664680350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bfd493de336941488706be0fdf6f0ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 6406758863138852101, guid: f761c3c5b7127b74ea062c2c78d553ba, type: 3}
+  Player: {fileID: 661379859}
+  bulletTransform: {fileID: 623351238}
+  canFire: 1
+  FireRate: 3
+  Ammo: 5
+  pellets: 5
 --- !u!1 &1000923692
 GameObject:
   m_ObjectHideFlags: 0

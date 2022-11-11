@@ -19,6 +19,8 @@ public class Movement : MonoBehaviour
     public bool Gun = true;
     public bool Rockets = true;
     public bool RocketsObtained = false;
+    public bool ShotGun;
+    public bool ShotGunObtained;
 
     void Start()
     {
@@ -90,6 +92,18 @@ public class Movement : MonoBehaviour
             if (Input.GetButtonDown("3"))
             {
                 Rockets = true;
+                flame = false;
+                Gun = false;
+
+            }
+        }
+
+        if (ShotGunObtained == true)
+        {
+            if (Input.GetButtonDown("4"))
+            {
+                ShotGun = true;
+                Rockets = false;
                 flame = false;
                 Gun = false;
 
