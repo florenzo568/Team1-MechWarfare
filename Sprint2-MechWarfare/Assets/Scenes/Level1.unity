@@ -1716,9 +1716,9 @@ MonoBehaviour:
   Gun: {fileID: 1717596640}
   Bullet: {fileID: 7432706623789448952, guid: 6e8d2488f78c79e478033bb565821dd5, type: 3}
   FirePoint: {fileID: 138093381}
-  FireRate: 5
+  FireRate: 2
   NextTimeToFire: 0
-  Force: 200
+  Force: 100
 --- !u!212 &1784610090
 SpriteRenderer:
   m_ObjectHideFlags: 0
