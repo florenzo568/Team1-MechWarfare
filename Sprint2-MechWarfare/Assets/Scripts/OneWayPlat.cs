@@ -5,7 +5,7 @@ using UnityEngine;
 public class OneWayPlat : MonoBehaviour
 {
     public GameObject currentPlat;
-    [SerializeField] private BoxCollider2D playerCollider;
+    [SerializeField] private CapsuleCollider2D playerCollider;
 
 
     // Update is called once per frame

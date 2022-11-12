@@ -522,10 +522,10 @@ GameObject:
   - component: {fileID: 661379858}
   - component: {fileID: 661379857}
   - component: {fileID: 661379856}
-  - component: {fileID: 661379855}
   - component: {fileID: 661379859}
   - component: {fileID: 661379860}
   - component: {fileID: 661379861}
+  - component: {fileID: 661379862}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -533,32 +533,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &661379855
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 661379854}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.49204826, y: 0.75699806}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 12.8125, y: 14.234375}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 11.219465, y: 12.354963}
-  m_EdgeRadius: 0
 --- !u!50 &661379856
 Rigidbody2D:
   serializedVersion: 4
@@ -575,7 +549,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 4
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 145d407135502e447b863eeb4f0e6223, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
@@ -709,7 +683,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentPlat: {fileID: 0}
-  playerCollider: {fileID: 661379855}
+  playerCollider: {fileID: 661379862}
+--- !u!70 &661379862
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 661379854}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 12.8125, y: 14.234375}
+  m_Direction: 0
 --- !u!1 &664680350
 GameObject:
   m_ObjectHideFlags: 0
@@ -724,7 +714,7 @@ GameObject:
   - component: {fileID: 664680354}
   m_Layer: 0
   m_Name: Pivot
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1872,6 +1862,10 @@ PrefabInstance:
     - target: {fileID: 5278234384041076688, guid: a34aacdbee4188747838a47701f44ad8, type: 3}
       propertyPath: m_Name
       value: Turret
+      objectReference: {fileID: 0}
+    - target: {fileID: 5278234384041076688, guid: a34aacdbee4188747838a47701f44ad8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5278234384041076689, guid: a34aacdbee4188747838a47701f44ad8, type: 3}
       propertyPath: Target
