@@ -21,6 +21,8 @@ public class Movement : MonoBehaviour
     public bool RocketsObtained = false;
     public bool ShotGun;
     public bool ShotGunObtained;
+    public bool Sniper;
+    public bool SniperObtained;
 
     void Start()
     {
@@ -77,6 +79,8 @@ public class Movement : MonoBehaviour
             Gun = true;
             flame = false;
             Rockets = false;
+            Sniper = false;
+            ShotGun = false;
         }
         if(flameObtained == true)
         {
@@ -85,6 +89,8 @@ public class Movement : MonoBehaviour
                 flame = true;
                 Gun = false;
                 Rockets = false;
+                Sniper = false;
+                ShotGun = false;
             }
         }
         if (RocketsObtained == true)
@@ -94,6 +100,8 @@ public class Movement : MonoBehaviour
                 Rockets = true;
                 flame = false;
                 Gun = false;
+                Sniper = false;
+                ShotGun = false;
 
             }
         }
@@ -103,6 +111,19 @@ public class Movement : MonoBehaviour
             if (Input.GetButtonDown("4"))
             {
                 ShotGun = true;
+                Rockets = false;
+                flame = false;
+                Gun = false;
+                Sniper = false;
+
+            }
+        }
+        if (SniperObtained == true)
+        {
+            if (Input.GetButtonDown("5"))
+            {
+                Sniper = true;
+                ShotGun = false;
                 Rockets = false;
                 flame = false;
                 Gun = false;

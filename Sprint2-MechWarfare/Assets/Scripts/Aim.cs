@@ -7,7 +7,9 @@ public class Aim : MonoBehaviour
     private Camera mainCam;
     private Vector3 mousePos;
     public GameObject bullet;
+    public GameObject Sniperbullet;
     [SerializeField] Movement Player;
+    [SerializeField] SpriteRenderer laser;
     public Transform bulletTransform;
     public bool canFire = true;
     private float Timer;
@@ -16,6 +18,7 @@ public class Aim : MonoBehaviour
     void Start()
     {
         mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+        laser.enabled = false;
     }
 
     // Update is called once per frame
@@ -54,6 +57,21 @@ public class Aim : MonoBehaviour
             Instantiate(bullet, bulletTransform.position, Quaternion.identity);
                 Ammo -= 1;
         }
+    }
+    if(Player.Sniper == true)
+    {
+        laser.enabled = true;
+        if(Input.GetMouseButton(0) && canFire)
+        {
+            
+            canFire = false;
+            Instantiate(Sniperbullet, bulletTransform.position, Quaternion.identity);
+                Ammo -= 1;
+        }
+    }
+    else
+    {
+        laser.enabled = false;
     }
         
     }
