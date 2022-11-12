@@ -14,6 +14,7 @@ public class Movement : MonoBehaviour
     public Rigidbody2D rb;
     public float jumpTime = 0.3f;
     public float StartjumpTime;
+    public float TurretDamage;
     public bool flame = true;
     public bool flameObtained = false;
     public bool Gun = true;
@@ -46,7 +47,10 @@ public class Movement : MonoBehaviour
             jumpTime = StartjumpTime;
         }
         WeaponSwapping();
-        //Flip();
+        if(Health <= 0)
+        {
+            Debug.Log("Dead");
+        }
         
     }
 
@@ -61,6 +65,10 @@ public class Movement : MonoBehaviour
         if(other.gameObject.CompareTag("Ground"))
         {
             canJump = true;
+        }
+        if(other.gameObject.CompareTag("TurretBullet"))
+        {
+            Health -= TurretDamage;
         }
         
     }

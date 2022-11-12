@@ -14,6 +14,7 @@ public class Turret : MonoBehaviour
     public float FireRate;
     public float NextTimeToFire;
     public float Force;
+    public float Health;
     // Start is called before the first frame update
     void Start()
     {
@@ -67,4 +68,6 @@ public class Turret : MonoBehaviour
         GameObject BulletInst = Instantiate(Bullet,FirePoint.position, Quaternion.identity);
         BulletInst.GetComponent<Rigidbody2D>().AddForce(Direction * Force);
     }
+
+    
 }
