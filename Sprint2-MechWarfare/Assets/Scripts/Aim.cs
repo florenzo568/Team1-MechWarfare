@@ -31,11 +31,11 @@ public class Aim : MonoBehaviour
         float rotationZ = Mathf.Atan2(rotation.y,rotation.x) * Mathf.Rad2Deg;
 
         transform.rotation = Quaternion.Euler(0,0, rotationZ);
-        if(mousePos.x < 0)
+        if(mousePos.x < Player.gameObject.transform.position.x)
         {
             Player.Renderer.flipX = true;
         }
-        else if (mousePos.x > 0)
+        else if (mousePos.x > Player.gameObject.transform.position.x)
         {
             Player.Renderer.flipX = false;
         }

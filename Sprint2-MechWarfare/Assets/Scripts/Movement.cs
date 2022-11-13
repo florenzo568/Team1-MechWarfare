@@ -113,7 +113,6 @@ public class Movement : MonoBehaviour
 
             }
         }
-
         if (ShotGunObtained == true)
         {
             if (Input.GetButtonDown("4"))
