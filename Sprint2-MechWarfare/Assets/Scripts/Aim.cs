@@ -9,9 +9,13 @@ public class Aim : MonoBehaviour
     public GameObject bullet;
     public GameObject Sniperbullet;
     [SerializeField] Movement Player;
+    [SerializeField] GameObject PlayerT;
     [SerializeField] SpriteRenderer laser;
+    [SerializeField] SpriteRenderer PlayerSprite;
     public Transform bulletTransform;
     public bool canFire = true;
+    public bool flip;
+    public float playerPos;
     private float Timer;
     public float FireRate;
     public int Ammo;
@@ -28,16 +32,24 @@ public class Aim : MonoBehaviour
 
         Vector3 rotation = mousePos - transform.position;
 
+        playerPos = PlayerT.transform.position.x;
+       
+
         float rotationZ = Mathf.Atan2(rotation.y,rotation.x) * Mathf.Rad2Deg;
 
         transform.rotation = Quaternion.Euler(0,0, rotationZ);
-        if(mousePos.x < Player.gameObject.transform.position.x)
+        
+        if(mousePos.x < playerPos)
         {
-            Player.Renderer.flipX = true;
+            PlayerSprite.flipX = true;
+            flip = false;
+
         }
-        else if (mousePos.x > Player.gameObject.transform.position.x)
+        else if (mousePos.x > playerPos)
         {
-            Player.Renderer.flipX = false;
+            PlayerSprite.flipX = false;
+            flip = true;
+
         }
 
         if(!canFire)
