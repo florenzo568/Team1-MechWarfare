@@ -41,7 +41,7 @@ public class Drone : MonoBehaviour
     private void Flip()
     {
         if(transform.position.x > player.transform.position.x)
-        {        
+        {
             Sprite.flipX = false;
         }
         else if(transform.position.x < player.transform.position.x)
