@@ -30,24 +30,6 @@ public class Turret : MonoBehaviour
 
         RaycastHit2D rayInfo = Physics2D.Raycast(transform.position, Direction, Range);
 
-        if(rayInfo)
-        {
-            if(rayInfo.collider.gameObject.tag == "Player")
-            {
-                if(Detected == false)
-                {
-                    Detected = true;
-                }
-            }
-            else
-            {
-                if(Detected == true)
-                {
-                    Detected = false;
-                }
-            }
-        }
-
         if(Detected)
         {
             Gun.transform.up = Direction;
@@ -69,5 +51,25 @@ public class Turret : MonoBehaviour
         BulletInst.GetComponent<Rigidbody2D>().AddForce(Direction * Force);
     }
 
+    void OnTriggerStay2D(Collider2D other)
+    {
+        if(other.gameObject.tag == "Player")
+            {
+                if(Detected == false)
+                {
+                    Detected = true;
+                }
+            }
+            else
+            {
+                if(Detected == true)
+                {
+                    Detected = false;
+                }
+            }
+        }
+
+        
+    
     
 }
