@@ -11,6 +11,8 @@ public class EnemyPatrol : MonoBehaviour
     public float walkSpeed;
     public LayerMask GroundLayer;
     public Collider2D bodyCollider;
+    public GameObject Bullet;
+
     void Start()
     {
         mustPatrol = true;
@@ -50,5 +52,7 @@ public class EnemyPatrol : MonoBehaviour
         walkSpeed *= -1;
         mustPatrol = true;
     }
+
+
 
 }
