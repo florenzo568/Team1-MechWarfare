@@ -4,48 +4,39 @@ using UnityEngine;
 
 public class EnemyShoot : MonoBehaviour
 {
-    [SerializeField] EnemyPatrol Enemy;
+    [SerializeField] NewEnemyPatrol Enemy;
     [SerializeField] GameObject Bullet;
+    [SerializeField] Transform bulletPos;
     public float FireRate;
-    private float StartRate;
+    public float StartRate;
     public float Force;
     [SerializeField] Transform FirePoint;
     // Start is called before the first frame update
     void Start()
     {
-        StartRate = FireRate;
+
     }
 
     // Update is called once per frame
     void Update()
     {
         
-    }
-
-
-    void OnTriggerStay2D(Collider2D other)
-    {
-        if(other.gameObject.CompareTag("Player"))
+        if(Enemy.Seen == true)
         {
-        Enemy.mustPatrol = false;
-        FireRate -= Time.deltaTime;
-        if(FireRate <= 0)
-        {
-            Shoot();
-            FireRate = StartRate;
-        }
-        }
-        else
-        {
-            Enemy.mustPatrol = true;
+            FireRate += Time.deltaTime;
+            if(FireRate > StartRate)
+            {
+                FireRate = 0;
+                Shoot();
+            }
         }
         
-        
     }
+
 
     void Shoot()
     {
-        GameObject BulletInst = Instantiate(Bullet,FirePoint.position, Quaternion.identity);
-        BulletInst.GetComponent<Rigidbody2D>().AddForce(transform.right * Force);
+        Instantiate(Bullet,bulletPos.position, Quaternion.identity);
+
     }
 }

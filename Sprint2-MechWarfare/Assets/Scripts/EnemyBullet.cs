@@ -4,11 +4,16 @@ using UnityEngine;
 
 public class EnemyBullet : MonoBehaviour
 {
-
-    // Start is called before the first frame update
+    public float Force;
+    public GameObject player;
+    private Rigidbody2D rb;
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody2D>();
+        player = GameObject.FindGameObjectWithTag("Player");
+
+        Vector3 direction = player.transform.position - transform.position;
+        rb.velocity = new Vector2(direction.x, direction.y).normalized * Force;
     }
 
     // Update is called once per frame
@@ -19,6 +24,10 @@ public class EnemyBullet : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        Destroy(this.gameObject);
+        if (other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("Ground"))
+        {
+             Destroy(this.gameObject);
+        }
+       
     }
 }
