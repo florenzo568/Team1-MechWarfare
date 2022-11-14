@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 800a41bb243c55845bcc37f28bfd954f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: 5
+  force: 20
   lifeTime: 2
 --- !u!50 &4979143514552209712
 Rigidbody2D:
@@ -136,6 +136,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damage: 3
+  PlayBullet: {fileID: 0}
 --- !u!61 &-7449143826064127756
 BoxCollider2D:
   m_ObjectHideFlags: 0
