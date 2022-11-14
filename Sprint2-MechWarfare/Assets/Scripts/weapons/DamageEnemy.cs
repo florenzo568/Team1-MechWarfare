@@ -18,7 +18,11 @@ void OnTriggerEnter2D(Collider2D other)
         {
             Debug.Log("Hit");
            PlayBullet = other.gameObject.GetComponent<EnemyHealth>();
-           PlayBullet.Health -= Damage;
+           if(PlayBullet != null)
+           {
+                PlayBullet.Health -= Damage;
+           }
+           
         }
     }
 }

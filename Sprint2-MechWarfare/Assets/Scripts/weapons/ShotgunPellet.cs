@@ -9,7 +9,7 @@ public class ShotgunPellet : MonoBehaviour
     private Rigidbody2D rb;
     public float force;
     public float lifeTime;
-    void Start()
+    void Awake()
     {
         mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         rb = GetComponent<Rigidbody2D>();
@@ -18,12 +18,12 @@ public class ShotgunPellet : MonoBehaviour
         Vector3 rotation = transform.position - mousePos;
         float angle = Mathf.Atan2(direction.x, direction.y) * Mathf.Rad2Deg;
         float spread = Random.Range(-10, 10);
-        //Quaternion bulletRotation = Quaternion.Euler(new Vector3(0, 0, (angle + spread) * -1));
+        Quaternion bulletRotation = Quaternion.Euler(new Vector3(0, 0, (angle + spread) * -1));
         //direction.z = bulletRotation.z;
         rb.velocity = transform.up * force;
         float rot = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
         //transform.rotation = bulletRotation;
-        Debug.Log(angle);
+        //Debug.Log(angle);
     }
     
 

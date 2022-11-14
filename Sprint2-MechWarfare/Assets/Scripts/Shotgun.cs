@@ -7,6 +7,7 @@ public class Shotgun : MonoBehaviour
 private Camera mainCam;
     private Vector3 mousePos;
     public GameObject bullet;
+    public GameObject ShotGunbullet;
     [SerializeField] Movement Player;
     public Transform bulletTransform;
     public bool canFire = true;
@@ -24,7 +25,7 @@ private Camera mainCam;
     // Update is called once per frame
     void Update()
     {
-        mousePos = mainCam.ScreenToWorldPoint(Input.mousePosition);
+        mousePos = mainCam.ScreenToWorldPoint(Input.mousePosition) - transform.position;
 
         Vector3 rotation = mousePos - transform.position;
 
@@ -33,14 +34,7 @@ private Camera mainCam;
         angle = Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg - 90;
 
         transform.rotation = Quaternion.Euler(0,0, rotationZ);
-        if(mousePos.x < 0)
-        {
-            Player.Renderer.flipX = true;
-        }
-        else if (mousePos.x > 0)
-        {
-            Player.Renderer.flipX = false;
-        }
+
 
         if(!canFire)
         {
@@ -61,7 +55,7 @@ private Camera mainCam;
             {
                 spread = Random.Range(-10,10);
                 Quaternion bulletRotation = Quaternion.Euler(new Vector3(0,0,angle + spread));
-                GameObject bulletInstance = Instantiate(bullet, bulletTransform.position, bulletRotation);
+                GameObject bulletInstance = Instantiate(ShotGunbullet, bulletTransform.position, bulletRotation);
 
             }
             

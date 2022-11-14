@@ -5,19 +5,19 @@ using UnityEngine;
 public class PlayerFlip : MonoBehaviour
 {
     [SerializeField] GameObject PlayerT;
-    private Camera mainCam;
+    public Camera mainCam;
     private Vector3 mousePos;
     [SerializeField] SpriteRenderer PlayerSprite;
     public float playerPos;
     void Start()
     {
-        mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        mousePos = mainCam.ScreenToWorldPoint(Input.mousePosition);
+        mousePos = mainCam.ScreenToWorldPoint(Input.mousePosition) - transform.position;
 
         playerPos = PlayerT.transform.position.x;
 

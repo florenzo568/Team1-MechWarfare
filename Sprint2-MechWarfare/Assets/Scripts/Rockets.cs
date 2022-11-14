@@ -23,7 +23,7 @@ public class Rockets : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        mousePos = mainCam.ScreenToWorldPoint(Input.mousePosition);
+        mousePos = mainCam.ScreenToWorldPoint(Input.mousePosition) - transform.position;
 
         Vector3 rotation = mousePos - transform.position;
 

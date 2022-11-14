@@ -33,7 +33,7 @@ public class RocketBehave : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.tag != "Player")
+        if(other.gameObject.CompareTag("Ground"))
         {
             Instantiate(ExplosionPrefab, gameObject.transform.position, Quaternion.identity);
             Debug.Log(other.gameObject.ToString());
