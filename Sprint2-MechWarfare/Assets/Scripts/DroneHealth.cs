@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyHealth : MonoBehaviour
+public class DroneHealth : MonoBehaviour
 {
     public float Health;
     [SerializeField] Animator anim;
@@ -16,8 +16,8 @@ public class EnemyHealth : MonoBehaviour
     {
         if(Health <= 0)
         {
-            anim.SetTrigger("death");
-            Destroy(this.gameObject, .35f);
+            anim.SetBool("death 0", true);
+            Destroy(this.gameObject, .75f);
         }
     }
     void OnTriggerEnter2D(Collider2D other)

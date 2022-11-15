@@ -6,6 +6,7 @@ public class DamageEnemy : MonoBehaviour
 {
     public float Damage;
     public EnemyHealth PlayBullet;
+    public DroneHealth Drone;
     void Awake()
     {
 
@@ -21,6 +22,16 @@ void OnTriggerEnter2D(Collider2D other)
            if(PlayBullet != null)
            {
                 PlayBullet.Health -= Damage;
+           }
+           
+        }
+        if(other.gameObject.CompareTag("Drone"))
+        {
+            Debug.Log("Hit");
+           Drone = other.gameObject.GetComponent<DroneHealth>();
+           if(Drone != null)
+           {
+                Drone.Health -= Damage;
            }
            
         }

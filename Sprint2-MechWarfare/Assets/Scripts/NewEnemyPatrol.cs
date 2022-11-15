@@ -6,7 +6,7 @@ public class NewEnemyPatrol : MonoBehaviour
 {
     [SerializeField] Transform[] waypoints;
     public float Speed;
-    private int waypointIndex = 1;
+    public int waypointIndex = 1;
     public bool Seen;
     public GameObject Bullet;
     public float FireRate;
