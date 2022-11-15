@@ -9,6 +9,9 @@ public class FlameThrower : MonoBehaviour
     [SerializeField] BoxCollider2D Flame;
     public Camera mainCam;
     private Vector3 mousePos;
+    public float tickTimer;
+    private float StartTick;
+    public float Damage;
     
     void Start()
     {
@@ -42,4 +45,6 @@ public class FlameThrower : MonoBehaviour
             }
         }
     }
+
+
 }
