@@ -14,14 +14,13 @@ public class FlameThrowerDamage : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D other)
     {
+        EnemyHealth HP = other.gameObject.GetComponent<EnemyHealth>();
         tickTimer -= Time.deltaTime;
         if(tickTimer <= 0)
         {
-            EnemyHealth HP = other.gameObject.GetComponent<EnemyHealth>();
-            if(HP != null)
-            {
+
                 HP.Health -= Damage;
-            }
+
             
         }
     }
