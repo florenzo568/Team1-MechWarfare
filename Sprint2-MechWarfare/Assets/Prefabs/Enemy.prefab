@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7946526724776139009}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.6100006, y: -0.13999999, z: 0.05848456}
+  m_LocalPosition: {x: 0.27, y: 0.02, z: 0.05848456}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -251,6 +251,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Health: 5
+  anim: {fileID: 0}
 --- !u!95 &7946526725593954164
 Animator:
   serializedVersion: 4
