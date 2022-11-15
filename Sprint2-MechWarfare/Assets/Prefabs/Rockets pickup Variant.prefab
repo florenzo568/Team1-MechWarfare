@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8062041047896089131, guid: 0a91aef29eb2b754baaf70d2505e6de3, type: 3}
       propertyPath: m_Name
-      value: Rockets pickup
+      value: Rockets pickup Variant
       objectReference: {fileID: 0}
     - target: {fileID: 8062041047896089132, guid: 0a91aef29eb2b754baaf70d2505e6de3, type: 3}
       propertyPath: Player
@@ -21,11 +21,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8062041047896089133, guid: 0a91aef29eb2b754baaf70d2505e6de3, type: 3}
       propertyPath: m_Color.g
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8062041047896089133, guid: 0a91aef29eb2b754baaf70d2505e6de3, type: 3}
       propertyPath: m_Color.r
-      value: 0.8377614
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8062041047896089134, guid: 0a91aef29eb2b754baaf70d2505e6de3, type: 3}
       propertyPath: m_RootOrder
