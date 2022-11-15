@@ -45,18 +45,14 @@ public class Aim : MonoBehaviour
 
         transform.rotation = Quaternion.Euler(0,0, rotationZ);
         
-        /*if(mousePos.x < PlayerTrans.position.x)
+        if(mousePos.x < PlayerTrans.position.x)
         {
-            PlayerSprite.flipX = true;
             flip = false;
-
         }
         else if (mousePos.x > PlayerTrans.position.x)
         {
-            PlayerSprite.flipX = false;
             flip = true;
-
-        }*/
+        }
 
         if(!canFire)
         {
