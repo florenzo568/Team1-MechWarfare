@@ -37,5 +37,9 @@ public class Bullet : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+        if (other.gameObject.CompareTag("HitBox"))
+        {
+            Destroy(this.gameObject);
+        }
     }
 }

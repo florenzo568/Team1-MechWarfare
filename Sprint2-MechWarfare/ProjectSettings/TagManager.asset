@@ -8,6 +8,7 @@ TagManager:
   - OneWay
   - TurretBullet
   - Enemy
+  - HitBox
   layers:
   - Default
   - TransparentFX

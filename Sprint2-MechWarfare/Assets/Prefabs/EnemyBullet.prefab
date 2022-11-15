@@ -136,6 +136,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 522d99ae14404cc44959476e379c6284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Force: 8.91
+  Force: 50
   player: {fileID: 0}
   Damage: 2
