@@ -36,4 +36,11 @@ public class ShotgunPellet : MonoBehaviour
         }
         
     }
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.gameObject.CompareTag("Ground"))
+        {
+            Destroy(this.gameObject);
+        }
+    }
 }

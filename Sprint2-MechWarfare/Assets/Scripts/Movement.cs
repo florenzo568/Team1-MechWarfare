@@ -16,10 +16,10 @@ public class Movement : MonoBehaviour
     public float jumpTime = 0.3f;
     public float StartjumpTime;
     public float TurretDamage;
-    public bool flame = true;
+    public bool flame;
     public bool flameObtained = false;
     public bool Gun = true;
-    public bool Rockets = true;
+    public bool Rockets;
     public bool RocketsObtained = false;
     public bool ShotGun;
     public bool ShotGunObtained;
