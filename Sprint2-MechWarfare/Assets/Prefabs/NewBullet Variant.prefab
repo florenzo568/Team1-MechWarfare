@@ -77,3 +77,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Force: 5
   player: {fileID: 0}
+  Damage: 0
