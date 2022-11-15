@@ -20,6 +20,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3793494053809587384, guid: f761c3c5b7127b74ea062c2c78d553ba, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3793494053809587384, guid: f761c3c5b7127b74ea062c2c78d553ba, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.9223347
       objectReference: {fileID: 0}
@@ -61,7 +65,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6406758863138852101, guid: f761c3c5b7127b74ea062c2c78d553ba, type: 3}
       propertyPath: m_Name
-      value: SniperBullet
+      value: SniperBullet Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f761c3c5b7127b74ea062c2c78d553ba, type: 3}

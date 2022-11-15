@@ -73,7 +73,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6406758863138852101, guid: f761c3c5b7127b74ea062c2c78d553ba, type: 3}
       propertyPath: m_Name
-      value: ShotgunPellet
+      value: Bullet Variant
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2583412599681849506, guid: f761c3c5b7127b74ea062c2c78d553ba, type: 3}
@@ -95,5 +95,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3b6a04c100a5554891291e37198ef74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: 5
-  lifeTime: 1.5
+  force: 10
+  lifeTime: 0.8
