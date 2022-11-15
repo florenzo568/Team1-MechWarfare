@@ -468,8 +468,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "CodeName \n\nLorenzo Fernandez\n\nSkyler Castilla and Lorenzo Fernandez\n\nMurray
-    McCosh\n\nDylan Jandu\n\n"
+  m_Text: "Skill Issue \n\nLorenzo Fernandez\n\nSkyler Castilla and Lorenzo Fernandez\n\nMurray
+    McCosh and Skyler Castilla \n\nDylan Jandu\n\n"
 --- !u!222 &988617448
 CanvasRenderer:
   m_ObjectHideFlags: 0
