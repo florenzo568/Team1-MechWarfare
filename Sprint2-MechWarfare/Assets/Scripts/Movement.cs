@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Movement : MonoBehaviour
 {
@@ -25,6 +26,7 @@ public class Movement : MonoBehaviour
     public bool ShotGunObtained;
     public bool Sniper;
     public bool SniperObtained;
+    private float deathTime = 2f;
 
     void Start()
     {
@@ -52,6 +54,12 @@ public class Movement : MonoBehaviour
         if(Health <= 0)
         {
             Debug.Log("Dead");
+            deathTime -= Time.deltaTime;
+            Death();
+            if(deathTime <= 0)
+            {
+                SceneManager.LoadScene("CreditScene", LoadSceneMode.Single);
+            }
         }
         if(horizontal > 0 || 0 > horizontal)
         {
@@ -91,6 +99,11 @@ public class Movement : MonoBehaviour
             anim.SetBool("NotGrounded", true);
         }
         
+    }
+
+    void Death()
+    {
+        anim.SetBool("Death", true);
     }
     void WeaponSwapping()
     {
