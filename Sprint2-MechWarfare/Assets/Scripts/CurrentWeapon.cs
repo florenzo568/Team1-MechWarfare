@@ -9,7 +9,7 @@ public class CurrentWeapon : MonoBehaviour
     [SerializeField] TMP_Text Weapon;
     void Start()
     {
-        Weapon.text = "Balius VI";
+        Weapon.text = "Assault Rifle";
     }
 
     // Update is called once per frame
@@ -17,7 +17,7 @@ public class CurrentWeapon : MonoBehaviour
     {
         if(Player.Gun == true)
         {
-            Weapon.text = "Balius VI";
+            Weapon.text = "Assault Rifle";
         }
         if(Player.flame == true)
         {
