@@ -126,37 +126,37 @@ public class Movement : MonoBehaviour
                 ShotGun = false;
             }
         }
-        if (RocketsObtained == true)
+        if (ShotGunObtained == true)
         {
             if (Input.GetButtonDown("3"))
             {
-                Rockets = true;
-                flame = false;
-                Gun = false;
-                Sniper = false;
-                ShotGun = false;
-
-            }
-        }
-        if (ShotGunObtained == true)
-        {
-            if (Input.GetButtonDown("4"))
-            {
-                ShotGun = true;
                 Rockets = false;
                 flame = false;
                 Gun = false;
                 Sniper = false;
+                ShotGun = true;
 
             }
         }
         if (SniperObtained == true)
         {
-            if (Input.GetButtonDown("5"))
+            if (Input.GetButtonDown("4"))
             {
-                Sniper = true;
                 ShotGun = false;
                 Rockets = false;
+                flame = false;
+                Gun = false;
+                Sniper = true;
+
+            }
+        }
+        if (RocketsObtained == true)
+        {
+            if (Input.GetButtonDown("5"))
+            {
+                Sniper = false;
+                ShotGun = false;
+                Rockets = true;
                 flame = false;
                 Gun = false;
 
