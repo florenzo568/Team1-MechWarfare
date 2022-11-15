@@ -12,6 +12,7 @@ public class Rockets : MonoBehaviour
     Movement Player;
     public Transform bulletTransform;
     public bool canFire = true;
+    public bool flip;
     private float Timer;
     public float FireRate;
     public int Ammo;
@@ -33,10 +34,12 @@ public class Rockets : MonoBehaviour
         if (mousePos.x < 0)
         {
             Player.Renderer.flipX = true;
+            flip = true;
         }
         else if (mousePos.x > 0)
         {
             Player.Renderer.flipX = false;
+            flip = false;
         }
 
         if (!canFire)
