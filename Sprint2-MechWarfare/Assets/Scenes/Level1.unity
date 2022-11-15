@@ -23541,7 +23541,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 3c66c1e4ed7bc494e85bd708fce10f93, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0fdf9e0cf821c9c4b9805c7be0ca292c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -97758,6 +97758,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6796245991462347291, guid: fff8e8902081d21408ca872013513acf, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 0884655c1945f4241bc28d7934cc59a6, type: 3}
     - target: {fileID: 6796245991462347293, guid: fff8e8902081d21408ca872013513acf, type: 3}
       propertyPath: m_Name
       value: Rockets pickup Variant
@@ -98664,7 +98668,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: def08d06039bfea48be199a601917744, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0884655c1945f4241bc28d7934cc59a6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

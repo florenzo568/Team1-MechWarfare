@@ -59,6 +59,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5569613079847187061, guid: f761c3c5b7127b74ea062c2c78d553ba, type: 3}
+      propertyPath: Damage
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6406758863138852101, guid: f761c3c5b7127b74ea062c2c78d553ba, type: 3}
       propertyPath: m_Name
       value: Rocket Variant
