@@ -11,6 +11,7 @@ public class Movement : MonoBehaviour
     public bool FacingRight;
     public bool canJump = true;
     public SpriteRenderer Renderer;
+    [SerializeField] Animator anim;
     public Rigidbody2D rb;
     public float jumpTime = 0.3f;
     public float StartjumpTime;
@@ -37,6 +38,7 @@ public class Movement : MonoBehaviour
         if(Input.GetButtonDown("Jump") && canJump == true)
         {
             rb.velocity = new Vector2(rb.velocity.x, JumpForce);
+            anim.SetTrigger("Jump");
         }
         if(canJump == false)
         {
@@ -50,6 +52,14 @@ public class Movement : MonoBehaviour
         if(Health <= 0)
         {
             Debug.Log("Dead");
+        }
+        if(horizontal > 0 || 0 > horizontal)
+        {
+            anim.SetBool("IsRunning", true);
+        }
+        else if (horizontal == 0)
+        {
+            anim.SetBool("IsRunning", false);
         }
         
     }
@@ -65,6 +75,7 @@ public class Movement : MonoBehaviour
         if(other.gameObject.CompareTag("Ground"))
         {
             canJump = true;
+            anim.SetBool("NotGrounded", false);
         }
         if(other.gameObject.CompareTag("TurretBullet"))
         {
@@ -77,6 +88,7 @@ public class Movement : MonoBehaviour
         if(other.gameObject.CompareTag("Ground"))
         {
             canJump = false;
+            anim.SetBool("NotGrounded", true);
         }
         
     }

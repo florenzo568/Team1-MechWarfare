@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
     public float Health;
+    [SerializeField] Animator anim;
     void Start()
     {
         
@@ -15,7 +16,8 @@ public class EnemyHealth : MonoBehaviour
     {
         if(Health <= 0)
         {
-            Destroy(this.gameObject);
+            anim.SetTrigger("death");
+            Destroy(this.gameObject, .35f);
         }
     }
 }

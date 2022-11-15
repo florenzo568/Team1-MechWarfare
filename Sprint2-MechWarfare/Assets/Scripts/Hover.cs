@@ -9,6 +9,7 @@ public class Hover : MonoBehaviour
     public float maxFuel;
     public float regenRate;
     public float Thrust;
+    [SerializeField] Animator anim;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,10 +24,15 @@ public class Hover : MonoBehaviour
         {
             Player.rb.velocity = new Vector2(Player.rb.velocity.x, Thrust);
             Fuel -= Time.deltaTime;
+            anim.SetBool("NotGrounded", true);
         }
         else if(Fuel < 0)
         {
             Player.rb.velocity = new Vector2(Player.rb.velocity.x, 0);
+        }
+        else
+        {
+            anim.SetBool("NotGrounded", false);
         }
 
         if (Fuel < maxFuel)
