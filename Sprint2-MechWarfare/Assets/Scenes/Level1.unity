@@ -9359,6 +9359,7 @@ GameObject:
   - component: {fileID: 661379861}
   - component: {fileID: 661379862}
   - component: {fileID: 661379863}
+  - component: {fileID: 661379864}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -9475,7 +9476,7 @@ MonoBehaviour:
   FacingRight: 0
   canJump: 1
   Renderer: {fileID: 661379857}
-  anim: {fileID: 0}
+  anim: {fileID: 661379864}
   rb: {fileID: 661379856}
   jumpTime: 0.3
   StartjumpTime: 0
@@ -9506,7 +9507,7 @@ MonoBehaviour:
   maxFuel: 1
   regenRate: 0.1
   Thrust: 10
-  anim: {fileID: 0}
+  anim: {fileID: 661379864}
 --- !u!114 &661379861
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9553,6 +9554,26 @@ MonoBehaviour:
   mainCam: {fileID: 519420031}
   PlayerSprite: {fileID: 661379857}
   playerPos: 0
+--- !u!95 &661379864
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 661379854}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 59c44d9c433ade04a92be58b830adc4f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &664680350
 GameObject:
   m_ObjectHideFlags: 0

@@ -38,7 +38,7 @@ public class Movement : MonoBehaviour
         if(Input.GetButtonDown("Jump") && canJump == true)
         {
             rb.velocity = new Vector2(rb.velocity.x, JumpForce);
-            anim.SetTrigger("Jump");
+            anim.SetBool("Jump", true);
         }
         if(canJump == false)
         {
@@ -75,7 +75,7 @@ public class Movement : MonoBehaviour
         if(other.gameObject.CompareTag("Ground"))
         {
             canJump = true;
-            anim.SetBool("NotGrounded", false);
+            anim.SetBool("Jump", false);
         }
         if(other.gameObject.CompareTag("TurretBullet"))
         {
