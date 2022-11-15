@@ -9,15 +9,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3248197936068646994, guid: f761c3c5b7127b74ea062c2c78d553ba, type: 3}
       propertyPath: m_Color.b
-      value: 0
+      value: 0.38581347
       objectReference: {fileID: 0}
     - target: {fileID: 3248197936068646994, guid: f761c3c5b7127b74ea062c2c78d553ba, type: 3}
       propertyPath: m_Color.g
-      value: 0
+      value: 0.38581347
       objectReference: {fileID: 0}
     - target: {fileID: 3248197936068646994, guid: f761c3c5b7127b74ea062c2c78d553ba, type: 3}
       propertyPath: m_Color.r
-      value: 1
+      value: 0.9622642
       objectReference: {fileID: 0}
     - target: {fileID: 3793494053809587384, guid: f761c3c5b7127b74ea062c2c78d553ba, type: 3}
       propertyPath: m_RootOrder
@@ -25,11 +25,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3793494053809587384, guid: f761c3c5b7127b74ea062c2c78d553ba, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.16329934
+      value: 0.2632993
       objectReference: {fileID: 0}
     - target: {fileID: 3793494053809587384, guid: f761c3c5b7127b74ea062c2c78d553ba, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.1664359
+      value: 0.2664359
       objectReference: {fileID: 0}
     - target: {fileID: 3793494053809587384, guid: f761c3c5b7127b74ea062c2c78d553ba, type: 3}
       propertyPath: m_LocalPosition.x
@@ -95,5 +95,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3b6a04c100a5554891291e37198ef74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: 10
-  lifeTime: 0.8
+  force: 20
+  lifeTime: 0.2
