@@ -9,7 +9,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5499157482977022301, guid: f85a5fe37498aff4fb313fcb7c6275dc, type: 3}
       propertyPath: m_Name
-      value: SkinnyMech
+      value: SkinnyMech Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 5499157482977022303, guid: f85a5fe37498aff4fb313fcb7c6275dc, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5499157482977022303, guid: f85a5fe37498aff4fb313fcb7c6275dc, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5499157482977022304, guid: f85a5fe37498aff4fb313fcb7c6275dc, type: 3}
       propertyPath: m_RootOrder
