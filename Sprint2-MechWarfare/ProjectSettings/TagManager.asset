@@ -9,6 +9,8 @@ TagManager:
   - TurretBullet
   - Enemy
   - HitBox
+  - Flame
+  - Drone
   layers:
   - Default
   - TransparentFX

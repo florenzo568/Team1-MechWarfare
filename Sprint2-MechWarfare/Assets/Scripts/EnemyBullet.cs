@@ -9,6 +9,7 @@ public class EnemyBullet : MonoBehaviour
     private Rigidbody2D rb;
     public float Damage;
     private Movement PlayerCS;
+    public float lifeTime = 2f;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -21,7 +22,11 @@ public class EnemyBullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        lifeTime -= Time.deltaTime;
+        if (lifeTime <= 0)
+        {
+            Destroy(this.gameObject);
+        }
     }
 
     void OnCollisionEnter2D(Collision2D other)

@@ -139,3 +139,4 @@ MonoBehaviour:
   Force: 20
   player: {fileID: 0}
   Damage: 0.1
+  lifeTime: 2
