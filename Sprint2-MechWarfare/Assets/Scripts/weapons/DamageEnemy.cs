@@ -6,9 +6,9 @@ public class DamageEnemy : MonoBehaviour
 {
     public float Damage;
     public EnemyHealth PlayBullet;
-    void Start()
+    void Awake()
     {
-        
+
     }
 
     // Update is called once per frame

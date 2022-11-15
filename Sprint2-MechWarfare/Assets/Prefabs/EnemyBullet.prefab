@@ -137,3 +137,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Force: 8.91
+  player: {fileID: 0}
+  Damage: 2
